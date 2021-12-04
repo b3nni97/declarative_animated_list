@@ -120,7 +120,7 @@ class _DeclarativeListState<T extends Object>
 
   @override
   Widget build(final BuildContext context) {
-    return AnimatedList(
+    return SliverAnimatedList(
       key: _animatedListKey,
       initialItemCount: widget.initialItemCount,
       itemBuilder: (final BuildContext context, final int index,
@@ -128,13 +128,13 @@ class _DeclarativeListState<T extends Object>
           this
               .widget
               .itemBuilder(context, this.widget.items[index], index, animation),
-      scrollDirection: widget.scrollDirection,
-      controller: widget.scrollController,
-      padding: widget.padding,
-      physics: widget.physics,
-      primary: widget.primary,
-      reverse: widget.reverse,
-      shrinkWrap: widget.shrinkWrap,
+      // scrollDirection: widget.scrollDirection,
+      // controller: widget.scrollController,
+      // padding: widget.padding,
+      // physics: widget.physics,
+      // primary: widget.primary,
+      // reverse: widget.reverse,
+      // shrinkWrap: widget.shrinkWrap,
     );
   }
 }
