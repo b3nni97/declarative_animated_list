@@ -86,8 +86,8 @@ class DeclarativeList<T extends Object> extends StatefulWidget {
 
 class _DeclarativeListState<T extends Object>
     extends State<DeclarativeList<T>> {
-  final GlobalKey<AnimatedListState> _animatedListKey =
-      GlobalKey<AnimatedListState>();
+  final GlobalKey<SliverAnimatedListState> _animatedListKey =
+      GlobalKey<SliverAnimatedListState>();
   late List<T> items;
 
   @override
@@ -140,7 +140,7 @@ class _DeclarativeListState<T extends Object>
 }
 
 class _AnimatedListDifferenceConsumer<T> extends DifferenceConsumer {
-  final AnimatedListState state;
+  final SliverAnimatedListState state;
   final List<T> oldList;
   final List<T> updatedList;
   final AnimatedItemBuilder<T> removeBuilder;
